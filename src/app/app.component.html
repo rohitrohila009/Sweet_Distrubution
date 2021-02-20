@@ -1,0 +1,93 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <h4 class="text-center">Welcome to the Fun Game!!!!!!</h4>
+
+  <div class="row">
+   <div class="col-3 bg-light">
+     <div class="row">
+       <div class="col-12 row">
+        <h5>Enter the number of Rows and Column</h5>
+         <div class="col ">
+          Rows:    <input type="text" [(ngModel)]="rows" />   
+
+         </div>
+        
+         <div class="col ">
+       Column:   <input type="text" [(ngModel)]="column" />
+         </div>
+       </div>
+     </div>
+     <div class="row">
+      <div class="col-12 row">
+        <h5>Select the Row and Column for XY</h5>
+        <div class="col ">
+         Rows:    <input type="text" [(ngModel)]="rowsForXY" />   
+        </div>
+         <div class="col ">
+      Column:   <input type="text" [(ngModel)]="columnForXY" />
+        </div>
+      </div>
+    </div><div class="row">
+      <div class="col-12 row">
+        <h5>Select the Corner from the option</h5>
+        <div class="row ">
+          <div class="col-12">
+            <input type="radio" name="cornerName" value="tLeft" [(ngModel)]="corner" /> Top Left 
+          </div>           
+        </div>
+        <div class="row ">
+          <div class="col-12">
+            <input type="radio" name="cornerName" value="tRight" [(ngModel)]="corner" /> Top Right
+          </div>           
+        </div>
+        <div class="row ">
+          <div class="col-12">
+            <input type="radio" name="cornerName" value="bLeft" [(ngModel)]="corner" /> Bottom Left
+          </div>           
+        </div> <div class="row ">
+          <div class="col-12">
+            <input type="radio" name="cornerName" value="bRight" [(ngModel)]="corner" /> Bottom Right
+          </div>           
+        </div>
+
+
+        <div class="row ">
+          <div class="col-12">
+
+<button class="btn btn-warning"   (click)="getDetails()">Submit</button>          </div>           
+        </div>
+      </div>
+    </div>
+   </div>
+   <div class="col-9 bg-warning" style="text-align: center;">
+    <div class="row">
+      <div class="col" >
+        <h3>  {{direction}}</h3>
+      </div>
+    </div>
+    <div *ngFor="let r of rowArray; index as i;" >
+   <div class="row" style="max-width: 100%;">
+     <div style=" border: 1px solid black;"
+    
+     [style.flex]="adjustStyleFlex()"
+     [style.max-width]="adjustStyleWidth()"
+
+
+
+      *ngFor="let c of columnArray; index as y;">
+      
+     
+
+       <div [ngStyle]="{'background-color':i==rowsForXY-1 && y==columnForXY-1 ? i==sweetRow-1 && y==sweetCol-1 ? 'grey'
+         : 'green' : i==sweetRow-1 && y==sweetCol-1 ? 'grey' : 'red' }">&nbsp;</div>
+   
+
+     </div>
+   </div>
+    </div>
+   
+   </div>    
+
+  </div>
+  
+</div>

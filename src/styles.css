@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css';
+/* @import '~@angular/material/prebuilt-themes/pink-bluegrey.css'; */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+/* html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.box{
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  margin: 5px;
+  display: block;
+
+}
+.grid{
+  align-content: center;
+  margin-left: 25%;
+ width: 40%;
+ display: flex;
+ flex-wrap: wrap;
+ margin-top: 10px;
+}
+.blue{
+  background-color: lightblue;
+
+}
+
+.gray{
+  background-color: lightgray;
+}
+
+.color{
+  background-color: #BBFFFF;
+} */
